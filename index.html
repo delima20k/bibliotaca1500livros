@@ -54,7 +54,7 @@
       padding: 0;
     }
     ul li::before {
-      content: '✅';
+      
       margin-right: 10px;
       color: green;
     }
@@ -78,6 +78,21 @@
     h2, h3 {
       color: #4a90e2;
     }
+    .conteudo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 2px solid black;
+    }
+    .book{
+      height: 100px;
+      width: 100px;
+      margin: auto;
+    }
+    .titleLivro{
+      color: #4a90e2;
+    }
     @media (min-width: 768px) {
       .video iframe {
         height: 400px;
@@ -97,21 +112,36 @@
 
   <div class="container">
     <div class="image">
-      <img src="https://via.placeholder.com/500x300?text=Pessoa+Lendo+no+Kindle" alt="Pessoa lendo no Kindle">
+      <h2>Aqui voçê aprende a transformar seu pdf em epub e enviar para seu Kindle</h2>
     </div>
 
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/yPfqEnEjH-o" allowfullscreen></iframe>
     </div>
 
     <p>Acesse agora o Pacote Definitivo de Desenvolvimento Pessoal e Mentalidade de Sucesso.</p>
     <p>Já imaginou ter em suas mãos uma biblioteca completa com mais de 1500 livros de autoajuda, com os ensinamentos mais valiosos de todos os tempos?</p>
 
-    <h2>📘 Inclui best-sellers consagrados como:</h2>
+    <h1>📘 Inclui best-sellers consagrados como:</h1>
     <ul>
-      <li>"Quem Pensa, Enriquece" – Napoleon Hill</li>
-      <li>"O Homem Mais Rico da Babilônia" – George S. Clason</li>
-      <li>"Mais Esperto que o Diabo" – Napoleon Hill</li>
+      <li> 
+        <div class="conteudo">
+          <h2 class="titleLivro">Quem Pensa, Enriquece – Napoleon Hill</h2>
+          <img class="book" src="img/livro-quem-pense-enriqueca.jpg" alt="">
+        </div>
+      </li>
+      <li>
+        <div class="conteudo">
+          <h2 class="titleLivro">O Honem mais rico da Babilonia  – Napoleon Hill</h2>
+          <img class="book" src="img/oHomen-mais-rico-da-babilonia.jpeg" alt="">
+        </div>
+      </li>
+      <li> 
+        <div class="conteudo">
+          <h2 class="titleLivro"> "Mais Esperto que o Diabo" – Napoleon Hill</h2>
+          <img class="book" src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="">
+        </div>
+      </li>
     </ul>
 
     <p>E centenas de outros títulos que moldaram as mentes dos maiores empreendedores do mundo.</p>
@@ -143,6 +173,8 @@
     <p><strong>Preciso ter Kindle?</strong><br> Não! Você pode ler os livros no Kindle, tablet, celular ou computador.</p>
     <p><strong>Como faço para converter os PDFs?</strong><br> Você receberá vídeos tutoriais explicando tudo passo a passo. É simples e rápido!</p>
     <p><strong>Por quanto tempo terei acesso aos livros?</strong><br> Acesso vitalício. O conteúdo é seu para sempre.</p>
+
+    
   </div>
 </body>
 </html>
