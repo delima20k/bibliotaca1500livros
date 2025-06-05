@@ -1,167 +1,212 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1500 Livros em PDF para Kindle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1500 Livros em PDF</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f0f2f5;
-      color: #333;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      background: #fff;
+      color: #222;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     header {
-      background-color: #4a90e2;
-      color: white;
+      background-color: #8B4513;
+      color: #fff8dc;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: 3.5em;
+      margin: 0 0 10px;
+      color: #ffd700;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      background: white;
+    header p {
+      font-size: 1.5em;
+      color: #fff8dc;
+    }
+    .carousel {
+ 
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      gap: 20px;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      scroll-snap-type: x mandatory;
     }
-    .image,
-    .video {
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 150px;
+      background: #f8f0e3;
+      border-radius: 10px;
+      scroll-snap-align: start;
       text-align: center;
-      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-    .image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-    }
-    .textP{
-      font-weight: 900;
-    }
-      .textPreco{
+    .h3li{
         text-align: center;
-
-      }
-    .video iframe {
+    }
+    .carousel-item img {
       width: 100%;
-      height: 250px;
-      border: none;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
+    }
+    .carousel-item h3 {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+    .description {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+      font-size: 1.3em;
+      
+      text-align: center;
+      line-height: 1.6;
+      color: #4b2e19;
+    }
+    .price-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .imgt{
+        color: #ff4500;; 
+    }
+    .price {
+      font-size: 2em;
+      color: #e63946;
+      font-weight: bold;
+    }
+    .cabecalho{
+        display: flex;
+        justify-content:center;
+        gap: 2em;
+    }
+    .imgHeader{
+        width: 100px;
+        height: 150px;
+        border-radius: 5px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .countdown {
+      font-size: 1.2em;
+      color: #444;
     }
     ul {
       list-style: none;
       padding: 0;
+      text-align: center;
     }
     ul li::before {
-      
+      text-align: center;
       margin-right: 10px;
       color: green;
     }
-    .cta {
-      text-align: center;
-      margin: 30px 0;
+    .tl{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2em;
+        color: #ff4500;
     }
-    .valorAtual{
-      color: rgb(111, 182, 6);
-      font-size: 42px;
-      font-weight:bold;
+    .ofertaLim{
+        text-align: center;
+        font-size: 1.5em;
     }
-    .cta button {
-      background-color: #f39c12;
+    .ofertaLim strong{
+        font-size: 2em;
+    }
+    .entenda{
+        text-align: center;
+    }
+    .buy-button {
+      display: block;
+      width: 90%;
+      max-width: 320px;
+      margin: 25px auto;
+      background: #ff4500;
       color: white;
-      padding: 15px 30px;
-      font-size: 1.1rem;
       border: none;
-      border-radius: 8px;
+      padding: 15px;
+      font-size: 1.4em;
+      border-radius: 10px;
+      font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: 0.3s;
     }
-      .valorAn{
-        color: red;
-      }
-    .cta button:hover {
-      background-color: #e67e22;
+    .buy-button:hover {
+      background: #c73800;
     }
-    h2, h3 {
-      color: #4a90e2;
+    footer {
+      background-color: #8B4513;
+      color: #fff8dc;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 1em;
     }
-    .conteudo{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 2px solid black;
-    }
-    .book{
-      height: 100px;
-      width: 100px;
-      margin: auto;
-    }
-    .titleLivro{
-      color: #4a90e2;
-    }
-    @media (min-width: 768px) {
-      .video iframe {
-        height: 400px;
-      }
+    @media(max-width: 600px) {
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2em;
+      }
+      header p, .description, .countdown {
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>1500 Livros em PDF</h1>
-    <p>Para Seu Kindle</p>
-    <p>🌟 Transforme Sua Mente com 1500 Livros de Autoajuda dos Maiores Mestres da História!</p>
-  </header>
 
-  <div class="container">
-    <div class="image">
-      <h2>Aqui voçê aprende a transformar seu pdf em epub e enviar para seu Kindle</h2>
-    </div>
+<header class="cabecalho">
+    <img class="imgHeader" src="img/imgTitylo.jpg" alt="">
+  <div><h1>1500 Livros em PDF</h1>
+  <p>Uma biblioteca completa direto no seu dispositivo</p>
+</div>
+</header>
+  <h2 class="tl">📘 Inclui best-sellers consagrados como:</h2>
+<div class="carousel">
+  <div class="carousel-item">
+    <img src="img/quemPecaEnriquesce3D.jpeg" alt="Romance">
+    <h3 class="imgt">Quem Pensa, Enriquece – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/HomenMaisRicoDaBabolhona3D.jpeg" alt="Ficcao">
+    <h3 class="imgt">O Honem mais rico da Babilonia  – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="Negocios">
+    <h3 class="imgt">"Mais Esperto que o Diabo" – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/as48LeisDoPoder3D.webp" alt="Autoajuda">
+    <h3 class="imgt">As 48 Leis do Pode - Robert Greene</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/oPoderDaAcao3D.webp" alt="">
+    <h3 class="imgt">O Poder da Ação - Paulo Vieira</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/oSegredo3D.webp" alt="">
+    <h3 class="imgt">O Segredo - Rhonda Byrne</h3>
+  </div>
+</div>
 
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/yPfqEnEjH-o" allowfullscreen></iframe>
-    </div>
+<div class="description">
+  Acesso imediato a 1500 livros em PDF para Kindle, celular ou PC.<br>
+  Obras de romance, negócios, autoajuda, ficção, estudo e muito mais.<br>
+  Leitura offline, vitalícia, com organização e qualidade garantida.<br>
+  Tudo por um valor único – sem mensalidade ou surpresas.<br>
+  Um investimento pequeno que traz um universo de conhecimento!
+</div>
+<p class="entenda">entenas de outros títulos que moldaram as mentes dos maiores empreendedores do mundo.</p>
 
-    <p>Acesse agora o Pacote Definitivo de Desenvolvimento Pessoal e Mentalidade de Sucesso.</p>
-    <p>Já imaginou ter em suas mãos uma biblioteca completa com mais de 1500 livros de autoajuda, com os ensinamentos mais valiosos de todos os tempos?</p>
-
-    <h1>📘 Inclui best-sellers consagrados como:</h1>
-    <ul>
-      <li> 
-        <div class="conteudo">
-          <h2 class="titleLivro">Quem Pensa, Enriquece – Napoleon Hill</h2>
-          <img class="book" src="img/livro-quem-pense-enriqueca.jpg" alt="">
-        </div>
-      </li>
-      <li>
-        <div class="conteudo">
-          <h2 class="titleLivro">O Honem mais rico da Babilonia  – Napoleon Hill</h2>
-          <img class="book" src="img/oHomen-mais-rico-da-babilonia.jpeg" alt="">
-        </div>
-      </li>
-      <li> 
-        <div class="conteudo">
-          <h2 class="titleLivro"> "Mais Esperto que o Diabo" – Napoleon Hill</h2>
-          <img class="book" src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="">
-        </div>
-      </li>
-    </ul>
-
-    <p>E centenas de outros títulos que moldaram as mentes dos maiores empreendedores do mundo.</p>
-
-    <h3>💡 Por que esse pacote é único?</h3>
+    <h3 class="h3li">💡 Por que esse pacote é único?</h3>
     <ul>
       <li>Conteúdo RICO e TRANSFORMADOR</li>
       <li>Compatível com Kindle, Tablet ou Celular</li>
@@ -169,33 +214,47 @@
       <li>Acesso Vitalício</li>
     </ul>
 
-    <h3>🎯 Para quem é esse pacote?</h3>
+    <h3 class="h3li">🎯 Para quem é esse pacote?</h3>
     <ul>
       <li>Para quem quer pensar como os ricos e agir como os bem-sucedidos</li>
       <li>Para estudantes, empreendedores, coaches e vendedores</li>
       <li>Para quem quer transformar sua mentalidade de uma vez por todas</li>
     </ul>
+    <p class="ofertaLim"><strong>⚠️ Oferta por Tempo Limitado!</strong><br> Este pacote completo está disponível por tempo limitado. Aproveite enquanto ainda está disponível com um valor simbólico.</p>
 
-    <p><strong>⚠️ Oferta por Tempo Limitado!</strong><br> Este pacote completo está disponível por tempo limitado. Aproveite enquanto ainda está disponível com um valor simbólico.</p>
-    <h2 class="textPreco textP">Oportunidade unica!</h2>
-    <p class="textPreco desconto">Com  50% de desconto</p>
-    <h2 class="textPreco valorAn">De: R$157.00</h2>
-    <h2 class="textPreco valorAtual">Por:R$87.00</h2>
    
+<div class="price-section">
+  <div class="old-price">De R$157,00</div>
+  <div class="price">Por R$87,00</div>
+  <div class="countdown">Oferta termina em: <span id="timer">01:00:00</span></div>
+</div>
 
+<button class="buy-button" onclick="window.location.href='https://pay.cakto.com.br/m93a9a3_413471'">
+  COMPRAR AGORA
+</button>
 
-    <div class="cta">
-      <button onclick="window.location.href='https://pay.cakto.com.br/m93a9a3_413471'">
-        📥 QUERO ACESSAR AGORA
-      </button>
-    </div>
+<footer>
+  &copy; 2025 | 1500 Livros em PDF — Leia mais, gaste menos. Liberdade total de leitura.
+</footer>
 
-    <h3>Dúvidas Frequentes (FAQ)</h3>
-    <p><strong>Preciso ter Kindle?</strong><br> Não! Você pode ler os livros no Kindle, tablet, celular ou computador.</p>
-    <p><strong>Como faço para converter os PDFs?</strong><br> Você receberá vídeos tutoriais explicando tudo passo a passo. É simples e rápido!</p>
-    <p><strong>Por quanto tempo terei acesso aos livros?</strong><br> Acesso vitalício. O conteúdo é seu para sempre.</p>
+<script>
+  let time = 3600;
+  const timer = document.getElementById("timer");
+  function updateTimer() {
+    const hr = String(Math.floor(time / 3600)).padStart(2, '0');
+    const min = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+    const sec = String(time % 60).padStart(2, '0');
+    timer.textContent = `${hr}:${min}:${sec}`;
+    if (time > 0) {
+      time--;
+      setTimeout(updateTimer, 1000);
+    } else {
+      timer.textContent = "Expirado";
+    }
+  }
+  updateTimer();
+</script>
 
-    
-  </div>
 </body>
 </html>
+
