@@ -151,9 +151,14 @@
     }
      .highlight li{
       list-style: none;
-      padding: 10px;
+      padding: 1rem;
       font-family: Georgia, 'Times New Roman', Times, serif;
+      
      }
+        .highlight li::before {
+      content: "✔️";
+      margin-right: 0.5rem;
+    }
      .highlight h2{
       color: #ffa500;;
      }
@@ -193,6 +198,21 @@
         font-size: 1.8em;
       }
 
+      .highlight {
+        padding: 0.1rem;
+        margin: 1.5rem 0.5rem;
+       
+      }
+      .highlight li {
+         text-align: center;
+         margin-left: 1px;
+         padding-left: 0.1rem;
+
+      }
+      ul{
+        margin: 0 ;
+      }
+
       p, .converter-section li, .card p {
         font-size: 1em;
       }
@@ -229,7 +249,7 @@
     <div class="garantia">
       <img src="img/selo.png" alt="Satisfação Garantida">
       <p style="color: #0f0; font-size: 1.1em;">Garantia de 7 Dias: sua satisfação ou seu dinheiro de volta!</p>
-        <div class="highlight">
+    <div class="highlight">
       <h2>🎁 Bônus incríveis</h2>
       <ul>
         <li>+600 livros já em EPUB otimizados para Kindle</li>
