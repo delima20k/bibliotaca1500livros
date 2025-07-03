@@ -1,88 +1,251 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1500 Livros em PDF para Kindle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1500 Livros em PDF</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      background: #e0dddd;
+      color: #222;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2, h3 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      font-family:'Courier New', Courier, monospace;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background-color: #ff4500;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.4em;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #e53e00;
-    }
-
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      margin: 40px 0;
-      padding-bottom: 10px;
-    }
-
-    .carousel img {
-      width: 160px;
-      height: 240px;
-      border-radius: 8px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      flex-shrink: 0;
-    }
-
     .garantia {
+      text-align: center;
       margin-top: 20px;
     }
 
     .garantia img {
       width: 120px;
     }
-
-    .timer {
+    .garantia p {
+      color: green;
       font-size: 2em;
+    }
+    header {
+      background-color: #8B4513;
+      color: #fff8dc;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin: 0 0 10px;
+      color: #ffd700;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    header p {
+      font-size: 1.5em;
+      color: #fff8dc;
+    }
+    .carousel {
+ 
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
+    }
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 150px;
+      background: #f8f0e3;
+      border-radius: 10px;
+      scroll-snap-align: start;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .h3li{
+        text-align: center;
+    }
+    .carousel-item img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .carousel-item h3 {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+    .description {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+      font-size: 1.3em;
+      
+      text-align: center;
+      line-height: 1.6;
+      color: #4b2e19;
+    }
+    .price-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .imgt{
+        color: #ff4500;; 
+    }
+    .price {
+      font-size: 2em;
+      color: #e63946;
       font-weight: bold;
-      color: #ff0000;
-      margin: 20px 0;
+    }
+    .cabecalho{
+        display: flex;
+        justify-content:center;
+        gap: 2em;
+    }
+    .imgHeader{
+        width: 70px;
+        height: 100px;
+        border-radius: 5px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .countdown {
+      font-size: 1.2em;
+      color: #444;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    ul li::before {
+      text-align: center;
+      margin-right: 10px;
+      color: green;
+    }
+    .tl{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: #ff4500;
+    }
+    .ofertaLim{
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .ofertaLim strong{
+        font-size: 2em;
+    }
+    .entenda{
+        text-align: center;
+    }
+    .buy-button {
+      display: block;
+      width: 90%;
+      max-width: 320px;
+      margin: 25px auto;
+      background: #ff4500;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.4em;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .wats{
+      text-align: center;
+      padding: 1em;
+    }
+      .highlight {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      background-color:#8B4513;
+      border: #222 solid 1px;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 5rem;  
+      color: #fff;  
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+     .highlight li{
+      list-style: none;
+      padding: 1rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+     } 
+    .highlight h2{
+      color: #ffd700;
+      font-size: 2rem;
+      padding: 1rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+     }  
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3ms ;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+    }
+    .descricao{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      border: #8B4513  solid 1px;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 5rem;   
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .entenda{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      border: #8B4513 solid 1px;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem;   
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .converter-section {
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+    .buy-button:hover {
+      background: #c73800;
+    }
+    footer {
+      background-color: #8B4513;
+      color: #fff8dc;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 1em;
+    }
+     .converter-section {
+        background-color: #8B4513;
         display: flex;
         flex-direction: column;
         align-items: center;
-      margin-top: 60px;
-      text-align: left;
+        margin-top: 60px;
+        text-align: left;
+        color: #fff;
+        display: flex;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin: 1rem;   
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
     }
 
@@ -110,108 +273,37 @@
       margin: 20px 0;
       border: none;
     }
-
-    .testimonials {
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      margin-bottom: 30px;
-    }
-    .preco{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
-        font-weight: bold;
-        padding: 10px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-sizing: border-box;
-      text-align: left;
-    }
-
-    .card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-       .highlight {
-      background-color:black;
-      border: 2px solid #dce2ec;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin: 5rem;    
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-     .highlight li{
-      list-style: none;
-      padding: 1rem;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      
-     }
-     .titulo{
-        font-size: 2.5em;
-      color: #ffa500;
-      font-weight: bolder;
-     }
-        .highlight li::before {
-      content: "✔️";
-      margin-right: 0.5rem;
-    }
-     .highlight h2{
-      color: #ffa500;;
-     }
-
-    .card p {
-      font-size: 1em;
-      color: #ddd;
-    }
-
-    .card .name {
-      font-weight: bold;
-      margin-top: 10px;
-      color: #fff;
-    }
-
-    footer {
-      position: relative;
-      background: rgba(255,255,255,0.1);
+       .container {
+      max-width: 1000px;
+      margin: 0 auto;
       padding: 40px 20px;
       text-align: center;
-      margin-top: 40px;
     }
-
-    .footer-icons {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    .apre{
+      font-size: 1.5em;
+      color: #ff4500;
     }
-
-    .footer-text {
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+       .apre{
       font-size: 1em;
-      color: #ccc;
-      margin-top: 10px;
+      color: #ff4500;
     }
-
-    @media screen and (max-width: 600px) {
-      h1, h2, h3 {
+        .garantia p {
+      font-size: 1em;
+    }
+       h1, h2, h3 {
         font-size: 1.8em;
       }
-
-      .highlight {
+      header p, .description, .countdown {
+        font-size: 1em;
+      }
+      .garantia img {
+        width: 90px;
+      }
+        .highlight {
         padding: 0.1rem;
         margin: 1.5rem 0.5rem;
        
@@ -222,51 +314,80 @@
          padding-left: 0.1rem;
 
       }
-      ul{
-        margin: 0 ;
-      }
-    
-
-      p, .converter-section li, .card p {
-        font-size: 1em;
-      }
-
-      .cta-button {
-        padding: 12px 20px;
-        font-size: 1.1em;
-      }
-
-      .carousel img {
-        width: 120px;
-        height: 180px;
-      }
-
-      .timer {
-        font-size: 1.6em;
-      }
-
-      .garantia img {
-        width: 90px;
-      }
-
-      .card {
-        width: 90%;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="titulo">MAIS DE 1.500 LIVROS EM PDF</h1>
-    <p>🔥 Aproveite a oportunidade única de transformar sua mente e seu futuro com os livros de autoajuda mais poderosos do mundo. Seja mais produtivo, desenvolva sua inteligência emocional e conquiste seus objetivos com este super pacote exclusivo para Kindle!</p>
+
+<header class="cabecalho">
+    <img class="imgHeader" src="img/imgTitylo.jpg" alt="">
+  <div><h1>1500 Livros em PDF</h1>
+  <p>Uma biblioteca completa direto no seu dispositivo</p>
+</div>
+</header>
+
+ <div class="container">
+    <p class="apre">🔥 Aproveite a oportunidade única de transformar sua mente e seu futuro com os livros de autoajuda mais poderosos do mundo. Seja mais produtivo, desenvolva sua inteligência emocional e conquiste seus objetivos com este super pacote exclusivo para Kindle!</p>
      <!-- <iframe src="https://youtube.com/embed/0innQjsDG3Q?feature" title="Conversão online de PDF para EPUB" allowfullscreen></iframe> -->
       <video  src="img/Vídeo do WhatsApp de 2025-06-10 à(s) 10.01.20_b3d380df.mp4" controls
         height="400px"
         width="600px">
       </video>
+
+  <h2 class="tl">📘 Inclui best-sellers consagrados como:</h2>
+<div class="carousel">
+  <div class="carousel-item">
+    <img src="img/quemPecaEnriquesce3D.jpeg" alt="Romance">
+    <h3 class="imgt">Quem Pensa, Enriquece – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/HomenMaisRicoDaBabolhona3D.jpeg" alt="Ficcao">
+    <h3 class="imgt">O Honem mais rico da Babilonia  – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="Negocios">
+    <h3 class="imgt">"Mais Esperto que o Diabo" – Napoleon Hill</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/as48LeisDoPoder3D.webp" alt="Autoajuda">
+    <h3 class="imgt">As 48 Leis do Pode - Robert Greene</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/oPoderDaAcao3D.webp" alt="">
+    <h3 class="imgt">O Poder da Ação - Paulo Vieira</h3>
+  </div>
+  <div class="carousel-item">
+    <img src="img/oSegredo3D.webp" alt="">
+    <h3 class="imgt">O Segredo - Rhonda Byrne</h3>
+  </div>
+</div>
+
+
+<div class="descricao">
+  <p class="description">
+    Acesso imediato a 1500 livros em PDF para Kindle, celular ou PC.<br>
+    Obras de romance, negócios, autoajuda, ficção, estudo e muito mais.<br>
+    Leitura offline, vitalícia, com organização e qualidade garantida.<br>
+    Tudo por um valor único – sem mensalidade ou surpresas.<br>
+    Um investimento pequeno que traz um universo de conhecimento!
+  </p>
+  
+  <div class="entenda">
+    <h3 class="h3li">💡 Por que esse pacote é único?</h3>
+    <ul>
+      <li>Conteúdo RICO e TRANSFORMADOR</li>
+      <li>Compatível com Kindle, Tablet ou Celular</li>
+      <li>Vídeos tutoriais passo a passo</li>
+      <li>Acesso Vitalício</li>
+    </ul>
+  </div>
+</div>
+
+
     <div class="garantia">
       <img src="img/selo.png" alt="Satisfação Garantida">
-      <p style="color: #0f0; font-size: 1.1em;">Garantia de 7 Dias: sua satisfação ou seu dinheiro de volta!</p>
+      <p>Garantia de 7 Dias: sua satisfação ou seu dinheiro de volta!</p>
+    </div>
     <div class="highlight">
       <h2>🎁 Bônus incríveis</h2>
       <ul>
@@ -278,85 +399,67 @@
       </ul>
     </div>
 
-    <div class="highlight">
-      <h2>💡 Vantagens Exclusivas</h2>
-      <ul>
-        <li>Entrega digital imediata</li>
-        <li>Compatível com Kindle, Android, iOS, PC e tablets</li>
-        <li>Acesso vitalício, sem mensalidades</li>
-      </ul>
-    </div>
-    </div>
-
-    <div class="carousel">
-      <img src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="Mais Esperto que o Diabo">
-      <img src="img/oPoderDaAcao3D.webp" alt="A Sutil Arte de Ligar o F*da-se">
-      <img src="img/oSegredo3D.webp" alt="Os Segredos da Mente Milionária">
-      <img src="img/quemPecaEnriquesce3D.jpeg" alt="O Poder do Agora">
-      <img src="img/as48LeisDoPoder3D.webp" alt="Os 7 Hábitos das Pessoas Altamente Eficazes">
-    </div>
-
     <div class="converter-section">
       <h2>Como Converter PDF para EPUB (Compatível com Kindle)</h2>
       <p>Quer deixar a leitura ainda mais fluida no Kindle? Converta seus PDFs para EPUB com essas ferramentas gratuitas:</p>
       <ul>
-        <li><a href="https://www.zamzar.com/convert/pdf-to-epub/" target="_blank" style="color:#ffa500;">Zamzar</a> - conversor online simples e rápido.</li>
-        <li><a href="https://convertio.co/pt/pdf-epub/" target="_blank" style="color:#ffa500;">Convertio</a> - ótimo para arquivos maiores.</li>
-        <li><a href="https://calibre-ebook.com/" target="_blank" style="color:#ffa500;">Calibre</a> - software gratuito e poderoso para organizar e converter ebooks.</li>
+        <li><a href="https://www.zamzar.com/convert/pdf-to-epub/" target="_blank" style="color:#ffd700;">Zamzar</a> - conversor online simples e rápido.</li>
+        <li><a href="https://convertio.co/pt/pdf-epub/" target="_blank" style="color:#ffd700;">Convertio</a> - ótimo para arquivos maiores.</li>
+        <li><a href="https://calibre-ebook.com/" target="_blank" style="color:#ffd700;">Calibre</a> - software gratuito e poderoso para organizar e converter ebooks.</li>
       </ul>
       <h3 style="margin-top:30px;">Tutoriais no YouTube</h3>
       <iframe src="https://www.youtube.com/embed/wvNY8XF3MpQ" title="Converter PDF para EPUB com Calibre" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/sLmzc8OaZwc" title="Conversão online de PDF para EPUB" allowfullscreen></iframe>
     </div>
 
-    <div class="testimonials">
-      <h2>O que nossos leitores dizem</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/retrato-de-homem-branco-isolado2.avif" alt="Depoimento Cliente">
-          <p>“Esses livros mudaram completamente minha rotina. Agora acordo mais motivado e focado em meus objetivos!”</p>
-          <div class="name">— João Souza</div>
-        </div>
-        <div class="card">
-          <img src="img/retrato-de-uma-jovem-usando-um-tablet-digital-sem-direitos-autorais-criado-com-generative-ai_762026-38151.avif" alt="Depoimento Cliente">
-          <p>“Nunca imaginei que livros em PDF pudessem ter tanta qualidade de conteúdo. Recomendo a todos!”</p>
-          <div class="name">— Maria Fernandes</div>
-        </div>
-        <div class="card">
-          <img src="img/uma-mulher1.avif" alt="Depoimento Cliente">
-          <p>“Em apenas uma semana de leitura, já vi mudanças reais em meus hábitos diários. Incrível!”</p>
-          <div class="name">— Rose Lima</div>
-        </div>
-      </div>
-    </div>
+    <h3 class="h3li">🎯 Para quem é esse pacote?</h3>
+    <ul>
+      <li>Para quem quer pensar como os ricos e agir como os bem-sucedidos</li>
+      <li>Para estudantes, empreendedores, coaches e vendedores</li>
+      <li>Para quem quer transformar sua mentalidade de uma vez por todas</li>
+    </ul>
 
-    <div class="timer" id="countdown">
-       Oferta expira em: 10:00
-    </div>
-    <div class="preco">De R$87,00</div>
-    <div class="preco">Por R$37,00</div>
-    
-    <a href="https://pay.cakto.com.br/32keiyu_427376">
-        <button class="cta-button">Conpre AGORA</button>
-    </a>
-  </div>
+<div class="wats">
+  <a class="whatsapp-btn" href="https://wa.me/5511941936680" target="_blank">
+    📲 Fale no WhatsApp
+  </a>
+</div>
 
-  <footer>
-    <div class="footer-icons">🔦 🕒</div>
-    <div class="footer-text">Marketing eBookPro: Especialistas em estratégias digitais para autores e distribuidores de livros digitais. Transformamos conhecimento em vendas com campanhas inteligentes, tráfego qualificado e automação.</div>
-  </footer>
+<p class="ofertaLim"><strong>⚠️ Oferta por Tempo Limitado!</strong><br> Este pacote completo está disponível por tempo limitado. Aproveite enquanto ainda está disponível com um valor simbólico.</p>
 
-  <script>
-    let time = 600;
-    const countdownEl = document.getElementById('countdown');
-    const updateCountdown = () => {
-      const minutes = Math.floor(time / 60);
-      const seconds = time % 60;
-      countdownEl.textContent = `Oferta expira em: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-      if (time > 0) time--;
-    };
-    setInterval(updateCountdown, 1000);
-  </script>
+   
+<div class="price-section">
+  <div class="old-price">De R$87,00</div>
+  <div class="price">Por R$37,00</div>
+  <div class="countdown">Oferta termina em: <span id="timer">01:00:00</span></div>
+</div>
+
+<button class="buy-button" onclick="window.location.href='https://pay.cakto.com.br/32keiyu_427376'">
+  COMPRAR AGORA
+</button>
+
+<footer>
+  &copy; 2025 | 1500 Livros em PDF — Leia mais, gaste menos. Liberdade total de leitura.
+</footer>
+
+<script>
+  let time = 600;
+  const timer = document.getElementById("timer");
+  function updateTimer() {
+    const hr = String(Math.floor(time / 3600)).padStart(2, '0');
+    const min = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+    const sec = String(time % 60).padStart(2, '0');
+    timer.textContent = `${hr}:${min}:${sec}`;
+    if (time > 0) {
+      time--;
+      setTimeout(updateTimer, 1000);
+    } else {
+      timer.textContent = "Expirado";
+    }
+  }
+  updateTimer();
+</script>
+
 </body>
 </html>
 
