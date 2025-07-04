@@ -196,6 +196,7 @@
       text-decoration: none;
       transition: 0.3ms ;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 2em;
       
     }
     .descricao{
@@ -286,9 +287,27 @@
       font-size: 1.5em;
     }
     .apre{
-      font-size: 1.5em;
+      font-size: 2em;
       color: #ff4500;
     }
+    span{
+      text-transform:uppercase ;
+    }
+    .b1{
+      background-color:#f1d116;
+      color: #8B4513;
+      font-weight: bold;
+      height: 50px;
+      padding: 5px;
+      margin-top: 2em;
+    }
+    :hover.b1 {
+      transform:0.5s ;
+      background-color: #ffd9008e;
+   }
+   .b2{
+    margin-bottom: 3em  ;
+   }
     @media(max-width: 600px) {
       header h1 {
         font-size: 1em;
@@ -297,7 +316,7 @@
         margin: 1.5em 0.5em;
       }
        .apre{
-      font-size: 1em;
+      font-size: 1.5em;
       color: #ff4500;
     }
      .em{
@@ -330,6 +349,15 @@
          padding-left: 0.1rem;
 
       }
+      .imgHeader{
+    display:none;
+      }
+      .hTitle h1{
+        font-size: 2em;
+      }
+      .hTitle p {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
@@ -337,13 +365,13 @@
 
 <header class="cabecalho">
     <img class="imgHeader" src="img/imgTitylo.jpg" alt="">
-  <div><h1>1500 Livros em PDF</h1>
+  <div class="hTitle"><h1>1500 Livros em PDF</h1>
   <p>Uma biblioteca completa direto no seu dispositivo</p>
 </div>
 </header>
 
  <div class="container">
-    <p class="apre">🔥 Aproveite a oportunidade única de transformar sua mente e seu futuro com os livros de autoajuda mais poderosos do mundo. Seja mais produtivo, desenvolva sua inteligência emocional e conquiste seus objetivos com este super pacote exclusivo para Kindle!</p>
+    <p class="apre">🔥 <span style="color:#0d323d;">Aproveite a oportunidade única</span> de transformar sua mente e seu futuro com os <span style="color:#641010;">livros de autoajuda</span> mais poderosos do mundo. <span style="color:#7c370f;">Seja mais produtivo</span>, desenvolva sua inteligência emocional e <span style="color:#1f54e6;">conquiste seus objetivos com este super pacote exclusivo</span> para <span style="color:#c51fe6;">Kindle!</span></p>
      <!-- <iframe src="https://youtube.com/embed/0innQjsDG3Q?feature" title="Conversão online de PDF para EPUB" allowfullscreen></iframe> -->
       <video  src="img/Vídeo do WhatsApp de 2025-06-10 à(s) 10.01.20_b3d380df.mp4" controls
         height="400px"
@@ -377,8 +405,15 @@
     <h3 class="imgt">O Segredo - Rhonda Byrne</h3>
   </div>
 </div>
+<div class="wats">
+  <a class="whatsapp-btn" href="https://wa.me/5511941936680" target="_blank">
+    📲 Fale no WhatsApp
+  </a>
+</div>
 
-
+ <button class="buy-button b1" onclick="window.location.href='https://pay.cakto.com.br/32keiyu_427376'">
+ 👉 GARANTA AGORA
+</button>
 <div class="descricao">
   <p>
     Acesso imediato a 1500 livros em PDF para Kindle, celular ou PC.<br>
@@ -413,7 +448,9 @@
         <li>+30 mil mangás, incluindo mangás de terror e otimizados para Kindle</li>
       </ul>
     </div>
-
+  <button class="buy-button b1 b2" onclick="window.location.href='https://pay.cakto.com.br/32keiyu_427376'">
+ 👉 GARANTA AGORA
+</button>
     <div class="converter-section">
       <h2>Como Converter PDF para EPUB (Compatível com Kindle)</h2>
       <p>Quer deixar a leitura ainda mais fluida no Kindle? Converta seus PDFs para EPUB com essas ferramentas gratuitas:</p>
@@ -444,13 +481,13 @@
 
    
 <div class="price-section">
-  <div class="old-price">De R$87,00</div>
-  <div class="price">Por R$37,00</div>
+  <div class="old-price">De R$97,00</div>
+  <div class="price">Por R$57,00</div>
   <div class="countdown">Oferta termina em: <span id="timer">01:00:00</span></div>
 </div>
 
 <button class="buy-button" onclick="window.location.href='https://pay.cakto.com.br/32keiyu_427376'">
-  COMPRAR AGORA
+  👉COMPRAR AGORA
 </button>
 
 <footer>
@@ -477,4 +514,5 @@
 
 </body>
 </html>
+
 
